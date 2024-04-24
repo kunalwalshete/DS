@@ -1,0 +1,87 @@
+Assignement 2 (RMI)
+
+1St Teminal
+javac *java
+rmiregistry
+
+2nd Terminal
+java AddServer
+
+3rd Terminal
+java AddClient
+
+------------------------------------------
+
+Assignment 3 (CORBA)
+
+This program requires java 8 version 
+to cheack java version : java -version
+
+if not 8 the these are the commands to install java version 8
+
+sudo apt-get remove openjdk*  
+sudo apt update  
+sudo apt install openjdk-8-jdk openjdk-8-jre 
+
+1st Teminal
+idlj -fall ReverseModule.idl
+javac *.java ReverseModule/*.java
+orbd -ORBInitialPort 1056&
+java ReverseServer -ORBInitialPort 1056&
+
+2nd Terminal
+java ReverseClient -ORBInitialPort 1056 -ORBInitialHost localhost
+
+--------------------------------------------------------
+
+Assignment 4 (MPI)
+
+This program requires java 8 version 
+to cheack java version : java -version
+
+if not 8 the these are the commands to install java version 8
+
+sudo apt-get remove openjdk*  
+sudo apt update  
+
+sudo apt install openjdk-8-jdk openjdk-8-jre 
+
+1st Terminal
+
+export MPJ_HOME= mpj-v0_44
+javac -cp $MPJ_HOME/lib/mpj.jar ScatterGather.java
+chmod +x $MPJ_HOME/bin/mpjrun.sh
+$MPJ_HOME/bin/mpjrun.sh -np 4 ScatterGather
+
+------------------------------------------------------------
+
+Assignment 5 (Clock Synchronization)
+
+1st Terminal
+ javac *.java
+java Server
+
+2nd Terminal
+java Client
+
+------------------------
+
+Assignment 6 (Mutual Exclusion)
+
+1st terminal
+javac tokenring.java
+java tokenring
+
+-----------------------
+
+Assignment 7 (Election Algorithm)
+
+For Bully
+javac Bully.java
+java Bully
+
+For Ring
+javac Ring.java
+java Ring
+
+
